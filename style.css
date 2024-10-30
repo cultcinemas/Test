@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.header p {
+  color: #555;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 30px;
+  background-color: #e9ecef;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Products Section */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-card {
+  width: 250px;
+  margin: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-card span {
+  background-color: #ffbf47;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  margin-bottom: 15px;
+  color: #bbb;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+.newsletter button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.footer-logo {
+  width: 60px;
+  margin-top: 20px;
+}
+
+.footer p {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #f8f9fa;
+  margin: 0 8px;
+  font-size: 20px;
+}
+
+.site-links a {
+  color: #f8f9fa;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.site-links a:hover {
+  text-decoration: underline;
+}
+.about, .contact {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+.about h2, .contact h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.about p, .contact p {
+  font-size: 1em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
