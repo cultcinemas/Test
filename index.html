@@ -1,515 +1,219 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>ASN Gadgets</title>
-
     <link rel="icon" href="https://i.postimg.cc/yYQnCFnM/ASN-20241029-205858-0000.png" type="image/png">
-
     <style>
-
         body {
-
             font-family: Arial, sans-serif;
-
             margin: 0;
-
             padding: 10px;
-
             background-color: #D1EAF0;
-
         }
-
         header {
-
             text-align: center;
-
             margin-bottom: 20px;
-
         }
-
         header img {
-
             max-width: 150px;
-
             height: 150px;
-
             border-radius: 5px;
-
         }
-
         header h1 {
-
             font-size: 2rem;
-
             margin-top: 10px;
-
             color: #000000;
-
         }
-
         header p#description {
-
             font-size: 0.8rem;
-
             color: #000000;
-
             text-align: center;
-
             margin: 8px 0;
-
             font-weight: 1000;
-
-            padding: 10px; /* Adds space inside the box */
-
-            border: 2px solid #000000; /* Creates the box border */
-
-            border-radius: 10px; /* Rounds the corners of the box */
-
-            background-color: #ffffff; /* Optional: Adds a background color */
-
-            display: inline-block; /* Ensures the box only wraps around the text */
-
-        }
-
-        .social-links {
-
-            margin-top: 10px;
-
-        }
-
-        .social-links a {
-
-            margin: 0 5px;
-
-            display: inline-block;
-
-            text-decoration: none;
-
-        }
-
-        .social-links a img {
-
-            width: 25px;
-
-            height: 25px;
-
-        }
-
-        .social-links a:hover {
-
-            background-color: #D1EAF0;
-
-        }
-
-        .search-container {
-
-            margin-bottom: 30px;
-
-            display: flex;
-
-            justify-content: center;
-
-            background-color: #ffffff;
-
-        }
-
-        #searchInput {
-
-            width: 100%;
-
-            max-width: 500px;
-
             padding: 10px;
-
-            font-size: 18px;
-
+            border: 2px solid #000000;
+            border-radius: 10px;
+            background-color: #ffffff;
+            display: inline-block;
         }
-
-        .product-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
-            gap: 20px;
-
+        .social-links {
+            margin-top: 10px;
         }
-
-        @keyframes shake {
-
-            0% { transform: translateX(0); }
-
-            25% { transform: translateX(-2px); }
-
-            50% { transform: translateX(2px); }
-
-            75% { transform: translateX(-2px); }
-
-            100% { transform: translateX(0); }
-
-        }
-
-        .product-card {
-
-            background-color: white;
-
-            border-radius: 20px;
-
-            padding: 5px;
-
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-
-            position: relative;
-
-            font-size: 15px;
-
-            font-weight: bold;
-
-            animation: shake 0.5s ease;
-
-        }
-
-        .product-card img {
-
-            width: 100%;
-
-            height: 200px;
-
-            object-fit: cover;
-
-            border-radius: 20px;
-
-        }
-
-        .product-number {
-
-            position: absolute;
-
-            top: 1px;
-
-            left: 1px;
-
-            background-color: #00ffEf;
-
-            padding: 1px 1px;
-
-            border-radius: 20px;
-
-            font-size: 15px;
-
-            font-weight: bold;
-
-        }
-
-        .product-card a {
-
-            text-decoration: none;
-
-            color: inherit;
-
-        }
-
-        .pagination {
-
-            margin-top: 20px;
-
-            text-align: center;
-
-        }
-
-        .pagination button {
-
-            padding: 5px 5px;
-
+        .social-links a {
             margin: 0 5px;
-
-            cursor: pointer;
-
+            display: inline-block;
+            text-decoration: none;
         }
-
+        .social-links a img {
+            width: 25px;
+            height: 25px;
+        }
+        .social-links a:hover {
+            background-color: #D1EAF0;
+        }
+        .search-container {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+        #searchInput {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            50% { transform: translateX(2px); }
+            75% { transform: translateX(-2px); }
+            100% { transform: translateX(0); }
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            position: relative;
+            font-size: 15px;
+            font-weight: bold;
+            animation: shake 0.5s ease;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .product-number {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            background-color: #00ffEf;
+            padding: 1px 1px;
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .product-card a {
+            text-decoration: none;
+            color: inherit;
+        }
         footer {
-
             margin-top: 40px;
-
             padding: 20px;
-
             background-color: #333;
-
             color: #fff;
-
             text-align: center;
-
         }
-
         footer a {
-
             color: #0ef;
-
             margin: 0 10px;
-
             text-decoration: underline;
-
             cursor: pointer;
-
         }
-
         .info-section {
-
             display: none;
-
             padding: 20px;
-
             background-color: #fff;
-
             margin: 20px 0;
-
             border-radius: 5px;
-
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
         }
-
         @media (max-width: 767px) {
-
             .product-grid {
-
                 grid-template-columns: repeat(2, 1fr);
-
                 gap: 10px;
-
             }
-
             .product-card img {
-
                 height: 150px;
-
             }
-
-            .pagination button {
-
-                padding: 3px 3px;
-
-                margin: 0 2px;
-
-                font-size: 5px;
-
-            }
-
         }
-
     </style>
-
 </head>
-
 <body>
-
     <header>
-
         <img src="https://i.postimg.cc/yYQnCFnM/ASN-20241029-205858-0000.png" alt="Website Logo">
-
         <h1>ASN Gadgets</h1>
-
         <p id="description">ASN Gadgets is your one-stop shop for the latest high-quality gadgets, electronics, and smart home devices. Explore asngadgets.com for top-rated, reliable tech products at competitive prices. Find new arrivals, unbeatable deals, and expert reviews tailored to your lifestyle.</p>
-
         <div class="social-links">
-
             <a href="https://www.instagram.com/ASNGadgets" target="_blank"><img src="https://i.postimg.cc/yYkwggNS/1000028911-removebg-preview.png" alt="Instagram"></a>
-
             <a href="https://telegram.me/ASNgadgets" target="_blank"><img src="https://i.postimg.cc/W3VX0PDQ/20241030-203516.png" alt="Telegram"></a>
-
             <a href="https://youtube.com/@asngadgets" target="_blank"><img src="https://i.postimg.cc/8PzTyzz1/1000028908-removebg-preview.png" alt="YouTube"></a>
-
             <a href="https://m.facebook.com/ASNGadgets" target="_blank"><img src="https://i.postimg.cc/1zqcJ08x/facebook-logo.png" alt="Facebook"></a>
-
             <a href="https://twitter.com/AsnGadgets" target="_blank"><img src="https://i.postimg.cc/KYTZpCGG/1000028953-removebg-preview.png" alt="Twitter"></a>
-
             <a href="https://whatsapp.com/channel/0029Vao6zgbIXnlxPRtpmd2a" target="_blank"><img src="https://i.postimg.cc/mrN32jfN/1000028899-removebg-preview.png" alt="WhatsApp"></a>
-
         </div>
-
     </header>
 
-
-
     <div class="search-container">
-
         <input type="text" id="searchInput" placeholder="Search by product number or name">
-
     </div>
-
     <div id="productGrid" class="product-grid"></div>
-
-    <div id="pagination" class="pagination"></div>
-
     
-
     <footer>
-
         <a href="https://asngadgets.com/about.html">About us</a> |
-
         <a href="https://asngadgets.com/contact.html">Contact us</a> |
-
         <a href="https://asngadgets.com/disclaimer.html">Disclaimer</a> |
-
         <a href="https://asngadgets.com/terms.html">Terms & Conditions</a> |
-
         <a href="https://asngadgets.com/affiliate.html">Affiliate Disclosure</a> |
-
         <a href="https://ansgadgets.com/privacy.html">Privacy policy</a>
-
     </footer>
 
-
-
     <script>
-
         let products = [];
-
-        let currentPage = 1;
-
         const productsPerPage = 100;
 
-
-
         fetch('products.json')
-
             .then(response => response.json())
-
             .then(data => {
-
                 products = data;
-
                 displayProducts();
-
-                setupPagination();
-
             });
-
-
 
         function displayProducts(filteredProducts = products) {
-
-            const startIndex = (currentPage - 1) * productsPerPage;
-
-            const endIndex = startIndex + productsPerPage;
-
-            const productsToDisplay = filteredProducts.slice(startIndex, endIndex);
-
-
-
             const productGrid = document.getElementById('productGrid');
-
             productGrid.innerHTML = '';
 
-
-
-            productsToDisplay.forEach(product => {
-
+            filteredProducts.forEach(product => {
                 const productCard = document.createElement('div');
-
                 productCard.className = 'product-card';
-
                 productCard.innerHTML = `
-
                     <a href="${product.link}">
-
                         <div class="product-number">#${product.id}</div>
-
                         <img src="${product.image}" alt="${product.name}">
-
                         <h3>${product.name}</h3>
-
                     </a>
-
                 `;
-
                 productGrid.appendChild(productCard);
-
             });
-
         }
-
-
-
-        function setupPagination(filteredProducts = products) {
-
-            const pageCount = Math.ceil(filteredProducts.length / productsPerPage);
-
-            const paginationElement = document.getElementById('pagination');
-
-            paginationElement.innerHTML = '';
-
-
-
-            for (let i = 1; i <= pageCount; i++) {
-
-                const button = document.createElement('button');
-
-                button.innerText = i;
-
-                button.addEventListener('click', () => {
-
-                    currentPage = i;
-
-                    displayProducts(filteredProducts);
-
-                });
-
-                paginationElement.appendChild(button);
-
-            }
-
-        }
-
-
 
         function performSearch() {
-
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-
             const filteredProducts = products.filter(product =>
-
                 product.id.toString().includes(searchTerm) ||
-
                 product.name.toLowerCase().includes(searchTerm)
-
             );
-
-            currentPage = 1;
-
             displayProducts(filteredProducts);
-
-            setupPagination(filteredProducts);
-
         }
-
-
 
         document.getElementById('searchInput').addEventListener('input', performSearch);
 
-
-
         function showSection(sectionId) {
-
             document.querySelectorAll('.info-section').forEach(section => {
-
                 section.style.display = 'none';
-
             });
-
             document.getElementById(sectionId).style.display = 'block';
-
         }
-
     </script>
-
 </body>
-
 </html>
